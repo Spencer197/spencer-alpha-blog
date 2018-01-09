@@ -5,4 +5,6 @@ root 'pages#home'# This make the homepage the root route, which doesn't need /ho
 #get 'pages/home', to: 'pages#home' - Replaced by the above line.
 get 'about', to: 'pages#about'
 get 'help', to: 'pages#help'
+
+resources :articles
 end
