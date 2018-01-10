@@ -6,8 +6,16 @@ class ArticlesController < ApplicationController
   def create
     #render plain: params[:article].inspect - Used as a test
     @article = Article.new(article_params)
-    @article.save
-    redirect_to articles_show(@article)#The text lecture says: redirect_to article_path(@article)
+    if @article.save
+      flash[:notice] = "Article was created successfully"
+      redirect_to article_path(@article)
+    else
+      render 'new'
+    end
+  end
+  
+  def show
+    @article = Article.find(params[:id])
   end
   
   private
