@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets //Pasted bootstrap-sprockets here, under the two jquery lines as instructed.
 //= require turbolinks
 //= require_tree .
