@@ -9,7 +9,11 @@
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/flash_messages' %>
-    <%= yield %>
+    <div class="container"><%#Adds a container to all pages of the app, so that there is some space at the sides of each page.%>
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

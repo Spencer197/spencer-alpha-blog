@@ -1,2 +1,68 @@
+$navbar-default-bg: #03337f;
+
 @import "bootstrap-sprockets";/* Copied these two @import lines from https://github.com/twbs/bootstrap-sass*/
 @import "bootstrap";
+
+//"logo" is an id, which is marked by a pound sign (#).  Used for unique elements of a website such as the logo.
+#logo {
+  fload: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+// "center" is a class, which is marked by a dot (.).
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('communication.jpg');
+  background-size: cover;
+  height: 600px;
+}
+
+.jumbotron h1 {
+  color: #03337f;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.btn-xlarge {
+  font-size: 1.7em;
+  background-color: #03337f;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}

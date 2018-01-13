@@ -5,17 +5,9 @@
 </head>
 <body>
 
-<h1>Welcome To My Alpha Blog!</h1>
-<br>
-<p>This is the homepage for my Alpha Blog website.  It has a header, a paragraph and a footer.</p>
-<p>You can click <%= link_to 'this link', articles_path %> to go to the Articles Index page.</p>
-<p>You can click <%= link_to 'this link', about_path %> to go to the About page.</p>
-<p>You can click <%= link_to 'this link', help_path %> to go to the Help page.</p>
-
-<br>
-<footer>
-  <p>Posted by: Spencer </p>
-  <p>Contact information: <a href="mailto:spencer@example.com">spencer@example.com</a>.</p>
-</footer>
+<div class="center jumbotron"><%#There are two classes here: a center class & a jumbotron class%>
+  <h1>ALPHA BLOG</h1>
+  <%= link_to "Sign-up Now!", "#", class: "btn btn-primary btn-lg btn-xlarge" %><%#btn-xlarge gives the sign-up button a class for styling ajustments in custom.css.scss.%>
+</div>
 </body>
 </html>
