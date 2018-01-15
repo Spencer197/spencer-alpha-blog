@@ -1,15 +1,15 @@
-<% if obj.errors.any? %>
+<% if obj.errors.any? %><%# All instances of @article are changed to 'obj' so that flash error messages can be used by various instance varialbles.%>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h2 class="panel-title">
-            <%= pluralize(obj.errors.count, "error") %>
+            <%= pluralize(obj.errors.count, "error") %><%# All instances of @article are changed to 'obj' so that flash error messages can be used by various instance varialbles.%>
             prohibited this article from being saved:
           </h2>
           <div class="panel-body">
             <ul>
-              <% obj.errors.full_messages.each do |msg| %>
+              <% obj.errors.full_messages.each do |msg| %><%# All instances of @article are changed to 'obj' so that flash error messages can be used by various instance varialbles.%>
                 <li><%= msg %></li>
               <% end %>
             </ul>

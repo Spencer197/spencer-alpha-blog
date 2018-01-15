@@ -1,10 +1,8 @@
 <div class="row">
   <div class="col-xs-10 col-xs-offset-1">
-    <% flash.each do |name, msg| %>
+    <% flash.each do |name, msg| %><%# 'name' could be: success, notice, warning, danger.%>
       <div class='alert alert-<%="#{name}" %>'>
-        <a href="#" class="close" data-dismiss="alert">
-          &#215;
-        </a>
+        <a href="#" class="close" data-dismiss="alert">&#215;</a><%# Renders an X that can be clicked to make the flash message disappear.%>
         <%= msg %>
       </div>
     <% end %>  
