@@ -5,7 +5,7 @@ $navbar-default-bg: #03337f;
 
 //"logo" is an id, which is marked by a pound sign (#).  Used for unique elements of a website such as the logo.
 #logo {
-  fload: left;
+  float: left;
   font-size: 1.7em;
   color: #fff;
   text-transform: uppercase;
@@ -75,4 +75,15 @@ footer ul li {
 .description {
   margin-top: 0;
   border-bottom: 2px solid #03337f;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 2px solid #03337f;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
