@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
   def create
     #render plain: params[:article].inspect - Used as a test
     @article = Article.new(article_params)
+    @article.user = User.first#Temporarily hard codes the user association to the article.
     if @article.save
       flash[:success] = "Article was created successfully"
       redirect_to article_path(@article)
