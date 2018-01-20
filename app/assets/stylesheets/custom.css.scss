@@ -18,7 +18,7 @@ $navbar-default-bg: #03337f;
   text-decoration: none;
 }
 
-// "center" is a class, which is marked by a dot (.).
+/*"center" is a class, which is marked by a dot (.).*/
 .center {
   text-align: center;
 }
@@ -65,6 +65,11 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+.article-meta-details {
+   border-top: 2px solid #03337f;
+   padding-top: 10px;
 }
 
 .article-actions {
