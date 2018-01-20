@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.6'
 # I moved the sqlite3 gem from here to 'group :development, :test do' below.
 #gem 'sqlite3'
+gem 'bcrypt', '~> 3.1.7'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
