@@ -7,4 +7,7 @@ get 'about', to: 'pages#about'
 get 'help', to: 'pages#help'
 
 resources :articles
+
+get 'signup', to: 'users#new'
+resources :users, except: [:new]#Provides all users routes except the 'new' route is called 'signup' instead of 'new'.
 end
