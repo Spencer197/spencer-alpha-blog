@@ -1,5 +1,19 @@
 <h2 align="center">Title: <%= @article.title %></h2><%# Centers the title of the article. %>
-<div class="well col-xs-8 col-xs-offset-2">
+<div class="well col-xs-8 col-xs-offset-2"><%#This class was copied from users/index.html.erb with some edits. %>
+  <% if @article.user %><%#Creates a block that temporarily handles articles with no user.  If there is no user this block is ignored.%>
+    <ul class="listing">
+      <div class="row center">
+        <div class="col-md-4 col-md-offset-4"><%#Removed the 'well' class%>
+          <li>Created by:</li>
+          <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li><%#Links to the user's show page. %>
+          <li class="article-title">
+            <%= link_to @article.user.username, user_path(@article.user) %>
+          </li>
+          <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></li>
+        </div>
+      </div>
+    </ul>
+  <% end %>
   <h4 class="center description"><strong>Description:</strong></h4><%# Centers the description%>
   
   <%= simple_format(@article.description) %><%#Displays users entered format (ie. returns,tabs,etc.)%>
