@@ -18,7 +18,7 @@
   
   <%= simple_format(@article.description) %><%#Displays users entered format (ie. returns,tabs,etc.)%>
     <div class="article-actions">
-      <% if logged_in? && current_user == @article.user %><%# Allows only the logged in user who created the article to access edit & delete actions.%>
+      <% if logged_in? && (current_user == @article.user || current_user.admin?) %><%# Allows only the logged in user who created the article to access edit & delete actions.%>
         <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %><%# Buttons for edit, view all articles, & delete article. %>
         <%= link_to "Delete this article", article_path(@article), method: :delete, 
                                           data: { confirm: "Are you sure you want to delete this article?" }, 
