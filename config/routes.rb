@@ -14,4 +14,6 @@ resources :users, except: [:new]#Provides all users routes except the 'new' rout
 get 'login', to: 'sessions#new'
 post 'login', to: 'sessions#create'
 delete 'logout', to: 'sessions#destroy'
+
+resources :categories, except: [:destroy]
 end
