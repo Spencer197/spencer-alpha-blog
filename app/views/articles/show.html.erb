@@ -17,6 +17,9 @@
   <h4 class="center description"><strong>Description:</strong></h4><%# Centers the description%>
   
   <%= simple_format(@article.description) %><%#Displays users entered format (ie. returns,tabs,etc.)%>
+  <% if @article.categories.any? %>
+    <p>Categories: <%= render @article.categories %></p><%#This code has the same effect as an each do block.%>
+  <% end %>
     <div class="article-actions">
       <% if logged_in? && (current_user == @article.user || current_user.admin?) %><%# Allows only the logged in user who created the article to access edit & delete actions.%>
         <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %><%# Buttons for edit, view all articles, & delete article. %>

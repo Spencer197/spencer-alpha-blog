@@ -77,23 +77,39 @@ footer ul li {
   padding-left: 0;
 }
 
+.badge {//Styles the categories badges under the description of each article.
+  padding: 1px 9px 2px;
+  font-size: 12.025px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #999999;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+ }
+
+.input_checkbox input {
+  width: auto !important;//Helps styling on PC/Windows browsers
+ }
+
 .article-actions {
   border-top: 2px solid #03337f;
   padding-top: 5px;
-}
+ }
 
 .description {
   margin-top: 0;
   border-bottom: 2px solid #03337f;
-}
+ }
 
 .article-title {
   font-weight: bold;
   font-size: 1.5em;
-}
+ }
 
 .article-body {
   border-top: 2px solid #03337f;
   padding-top: 15px;
   padding-bottom: 15px;
-}
+ }

@@ -20,7 +20,8 @@ def create
 end
 
 def show
-
+  @category = Category.find(params[:id])#Finds each category.
+  @category_articles = @category.articles.paginate(page: params[:page], per_page: 5)#paginates categories 5 per page.
 end
 
 private

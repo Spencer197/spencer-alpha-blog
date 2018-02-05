@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
   end
   
   def article_params
-    params.require(:article).permit(:title, :description)#(:article) is the 'top level key'
+    params.require(:article).permit(:title, :description, category_ids: [])#(:article) is the 'top level key', permit whitelists title, description & category_ids.  category_ids: [] white-lists category ids as an array with [].
   end
   
   def require_same_user
