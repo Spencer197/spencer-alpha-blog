@@ -3,6 +3,10 @@ $navbar-default-bg: #03337f;
 @import "bootstrap-sprockets";/* Copied these two @import lines from https://github.com/twbs/bootstrap-sass*/
 @import "bootstrap";
 
+.navbar.navbar-default {
+  margin-bottom: 50px;
+}
+
 //"logo" is an id, which is marked by a pound sign (#).  Used for unique elements of a website such as the logo.
 #logo {
   float: left;
@@ -13,28 +17,51 @@ $navbar-default-bg: #03337f;
   font-weight: bold;
 }
 
+#logo.navbar-brand {
+  text-shadow: -5px 5px 3px #000000;
+}
+
 #logo:hover {
   color: #fff;
   text-decoration: none;
 }
 
-/*"center" is a class, which is marked by a dot (.).*/
+//"center" is a class, which is marked by a dot (.).
 .center {
+  margin: auto;
   text-align: center;
 }
 
 .jumbotron {
-  background-image: asset-url('communication.jpg');
+  padding-top: 50px;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: asset-url('devices.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  //background: contain;
+  background-position: 50%;
+  width: 100%;
+  height: 368px;
+  max-width: 1000px;
+  
 }
 
 .jumbotron h1 {
   color: #03337f;
   text-align: center;
-  margin-bottom: 30px;
+  text-shadow: -5px 7px 3px #000000;
+  margin-top: 50px;
+  margin-bottom: 0px;
   letter-spacing: -1px;
   font-weight: bold;
+}
+
+.text {
+  color: #03337f;
+  text-shadow: -3px 3px 3px #000000;
 }
 
 .btn-xlarge {
@@ -43,7 +70,7 @@ $navbar-default-bg: #03337f;
 }
 
 footer {
-  margin-top: 45px;
+  margin-top: 0px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
